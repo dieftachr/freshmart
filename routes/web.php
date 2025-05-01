@@ -12,4 +12,4 @@ Route::get('/', function () {
 
 // root dengan mode resources
 
-Route::get('user', [UserController::class, 'index']);
+Route::get('/', [UserController::class, 'index']);
