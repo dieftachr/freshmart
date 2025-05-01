@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Route;
 // root dengan mode resources
 Route::resource('/products', ProdukController::class);
 Route::get('/', function () {
-    return view('index');
+    return view('user/index');
 });
 
 // root dengan mode resources

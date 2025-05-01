@@ -9,7 +9,6 @@ use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
-
 use Illuminate\Support\Facades\Redirect;
 
 class ProdukController extends Controller
