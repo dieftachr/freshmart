@@ -336,8 +336,8 @@
           Keranjang <span class="cart-count">0</span>
         </a>
         <div class="auth-buttons">
-          <a href="login.html" class="auth-btn login">Masuk</a>
-          <a href="register.html" class="auth-btn register">Daftar</a>
+          <a href="{{ route('login') }}" class="auth-btn login">Masuk</a>
+          <a href="{{ route('register') }}" class="auth-btn register">Daftar</a>
         </div>
       </div>
     </nav>
