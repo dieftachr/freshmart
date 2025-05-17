@@ -2,11 +2,11 @@
 @section('topbar-title', 'Menu Admin')
 
 @section('content')
-<body style="background: lightgray">
-    <div class="container mt-5 mb-5">
+    <h4 class="mb-3">Products Add</h4>
+    <div class="container mb-5">
         <div class="row">
             <div class="col-md-12">
-                <div class="card-border-0 shadow-sm rounded">
+                <div class="card border-0 shadow-sm rounded">
                     <div class="card-body">
                         <form action="{{ route('products.store') }}" method="post" enctype="multipart/form-data">
                             @csrf

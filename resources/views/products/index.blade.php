@@ -4,17 +4,16 @@
 @section('content')
     <div class="card border-0 shadow-sm rounded">
         <div class="card-body">
-
-            {{-- Header Atas: Judul dan Tombol Tambah --}}
             <div class="d-flex justify-content-between align-items-center mb-3">
                 <h4 class="mb-0">Daftar Produk</h4>
                 <a href="{{ route('products.create') }}" class="btn btn-md btn-success">+ Add Products</a>
             </div>
 
             <div class="table-responsive">
-                <table class="table table-hover table-bordered align-middle">
+                <table class="table table-hover table-bordered align-middle" id="nomor">
                     <thead class="table-light text-center">
                         <tr>
+                            <th>No.</th>
                             <th>Gambar</th>
                             <th>Nama Produk</th>
                             <th>Harga</th>
@@ -25,6 +24,7 @@
                     <tbody>
                         @forelse ($products as $product)
                         <tr>
+                            <td class="text-center"></td>
                             <td class="text-center">
                                 <img src="{{ asset('/storage/products/'.$product->image) }}" class="rounded" style="width: 100px; height: 100px; object-fit: cover;">
                             </td>
@@ -48,6 +48,14 @@
                         @endforelse
                     </tbody>
                 </table>
+                <script>
+                    const table = document.getElementById("nomor");
+                    const rows = table.getElementsByTagName("tbody")[0].getElementsByTagName("tr");
+
+                    for (let i = 0; i < rows.length; i++) {
+                        rows[i].getElementsByTagName("td")[0].textContent = i + 1;
+                    }
+                </script>
             </div>
 
             @if ($products->hasPages())
@@ -58,7 +66,7 @@
         </div>
     </div>
 
-    {{-- Optional: Custom styling untuk pagination --}}
+    {{-- pagination --}}
     <style>
         .pagination .page-link {
             color: #0d6efd;

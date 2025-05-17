@@ -34,10 +34,10 @@
                     <!-- Tombol Edit dan Back -->
                     <div class="row p-3 pt-0">
                         <div class="col-6 pe-2">
-                            <a href="{{ route('products.edit', $product->id) }}" class="btn btn-warning w-100 py-2">Edit</a>
+                            <a href="{{ route('products.edit', $product->id) }}" class="btn btn-primary w-100 py-2">Edit</a>
                         </div>
                         <div class="col-6 ps-2">
-                            <button onclick="history.back()" class="btn btn-primary w-100 py-2">Back</button>
+                            <button onclick="history.back()" class="btn btn-danger w-100 py-2">Back</button>
                         </div>
                     </div>
                 </div>
