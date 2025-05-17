@@ -310,11 +310,7 @@
     <nav class="navbar">
       <!-- ... existing code ... -->
       <div class="logo-container">
-        <img
-          src="assets/images/logo.png"
-          alt="Fresh Market Logo"
-          style="width: 40px; height: 40px; object-fit: contain"
-        />
+        <i class="fa fa-shopping-cart" alt="Fresh market logo" style="width: 40px; height: 40px; object-fit: contain; color: #000;"></i>
         <div class="logo">Fresh Market</div>
       </div>
       <!-- ... existing code ... -->
@@ -336,8 +332,8 @@
           Keranjang <span class="cart-count">0</span>
         </a>
         <div class="auth-buttons">
-          <a href="{{ route('login') }}" class="auth-btn login">Masuk</a>
-          <a href="{{ route('register') }}" class="auth-btn register">Daftar</a>
+          <a href="/login" class="auth-btn login">Masuk</a>
+          <a href="/register" class="auth-btn register">Daftar</a>
         </div>
       </div>
     </nav>
@@ -465,8 +461,8 @@
           updateCartCount();
         } else {
           authButtons.innerHTML = `
-                <a href="login.html" class="auth-btn login">Masuk</a>
-                <a href="register.html" class="auth-btn register">Daftar</a>
+                <a href="pages/login" class="auth-btn login">Masuk</a>
+                <a href="pages/register" class="auth-btn register">Daftar</a>
             `;
         }
       }

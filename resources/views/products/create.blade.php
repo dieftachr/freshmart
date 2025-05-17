@@ -1,11 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Products</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-</head>
+@extends('layout_admin/layout')
+@section('topbar-title', 'Menu Admin')
+
+@section('content')
 <body style="background: lightgray">
     <div class="container mt-5 mb-5">
         <div class="row">
@@ -68,9 +64,8 @@
                                 </div>
                                 @enderror
                             </div>
-
                             <button type="submit" class="btn btn-md btn-primary me-3">Save</button>
-                            <button type="reset" class="btn btn-md btn-danger me-3">Cancel</button>
+                            <button type="reset" class="btn btn-md btn-danger me-3" onclick="history.back()" >Cancel</button>
 
                         </form>
                     </div>
@@ -78,11 +73,13 @@
             </div>
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
-
-<script src="https://cdn.ckeditor.com/4.13.1/standard/ckeditor.js"></script>   
-<script>
-    CKEDITOR.replace('description');
+    
 </script>
+<!-- Script untuk CKEditor -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.ckeditor.com/4.13.1/standard/ckeditor.js"></script>
+    <script>
+        CKEDITOR.replace('deskripsi');
+    </script>
 </body>
-</html>
+@endsection

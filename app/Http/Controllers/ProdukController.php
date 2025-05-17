@@ -3,13 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
-//use Illuminate\Container\Attributes\Storage;
-use Illuminate\Contracts\Cache\Store;
-use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
-use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\View\View;
 
 class ProdukController extends Controller
 {

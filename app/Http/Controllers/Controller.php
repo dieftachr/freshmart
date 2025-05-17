@@ -1,14 +1,8 @@
 <?php
 
-namespace App\Http\PageController;
+namespace App\Http\Controllers;
 
-abstract class PagesController
+abstract class Controller
 {
-
     //
-}
-    public function index()
-    {
-        return view('index');
-    }
 }
